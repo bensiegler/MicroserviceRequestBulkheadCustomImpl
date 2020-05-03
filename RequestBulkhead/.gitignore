@@ -25,4 +25,5 @@ target/
 build/
 ### VS Code ###
 out/
+.idea/
 .vscode/

@@ -2,36 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e43b0bd-9687-494f-bc6c-c0be7fcd2f02" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../userMicroservice/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../userMicroservice/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../userMicroservice/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../userMicroservice/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../userMicroservice/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../userMicroservice/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../userMicroservice/src/main/java/com/bensiegler/userMicroservice/UserMicroserviceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../userMicroservice/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../userMicroservice/src/test/java/com/bensiegler/userMicroservice/UserMicroserviceApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../SpringJPA&amp;Hibernate/Examples/spring-data-jpa-starter/src/main/resources/templates/mainmenu.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../SpringJPA&amp;Hibernate/Examples/spring-data-jpa-starter/src/main/resources/templates/new_user.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../SpringJPA&amp;Hibernate/Examples/spring-data-jpa-starter/src/main/resources/templates/sign_in_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SpringJPA&amp;Hibernate/Examples/spring-data-jpa-starter/src/main/java/net/codejava/AppMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringJPA&amp;Hibernate/Examples/spring-data-jpa-starter/src/main/java/net/codejava/AppMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SpringJPA&amp;Hibernate/Examples/spring-data-jpa-starter/src/main/java/net/codejava/controllers/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringJPA&amp;Hibernate/Examples/spring-data-jpa-starter/src/main/java/net/codejava/controllers/AppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SpringJPA&amp;Hibernate/Examples/spring-data-jpa-starter/src/main/java/net/codejava/controllers/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringJPA&amp;Hibernate/Examples/spring-data-jpa-starter/src/main/java/net/codejava/controllers/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SpringJPA&amp;Hibernate/Examples/spring-data-jpa-starter/src/main/java/net/codejava/repositories/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringJPA&amp;Hibernate/Examples/spring-data-jpa-starter/src/main/java/net/codejava/repositories/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SpringJPA&amp;Hibernate/Examples/spring-data-jpa-starter/src/main/java/net/codejava/repositories/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringJPA&amp;Hibernate/Examples/spring-data-jpa-starter/src/main/java/net/codejava/repositories/CustomerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SpringJPA&amp;Hibernate/Examples/spring-data-jpa-starter/src/main/java/net/codejava/repositories/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringJPA&amp;Hibernate/Examples/spring-data-jpa-starter/src/main/java/net/codejava/repositories/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SpringJPA&amp;Hibernate/Examples/spring-data-jpa-starter/src/main/java/net/codejava/services/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringJPA&amp;Hibernate/Examples/spring-data-jpa-starter/src/main/java/net/codejava/services/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SpringJPA&amp;Hibernate/Examples/spring-data-jpa-starter/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringJPA&amp;Hibernate/Examples/spring-data-jpa-starter/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SpringMVC/spring_mvc_thymleaf_starter/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringMVC/spring_mvc_thymleaf_starter/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SpringMVC/spring_mvc_thymleaf_starter/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringMVC/spring_mvc_thymleaf_starter/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SpringMVC/spring_mvc_thymleaf_starter/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringMVC/spring_mvc_thymleaf_starter/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SpringMVC/spring_mvc_thymleaf_starter/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringMVC/spring_mvc_thymleaf_starter/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SpringMVC/spring_mvc_thymleaf_starter/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringMVC/spring_mvc_thymleaf_starter/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SpringMVC/spring_mvc_thymleaf_starter/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringMVC/spring_mvc_thymleaf_starter/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SpringMVC/spring_mvc_thymleaf_starter/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringMVC/spring_mvc_thymleaf_starter/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SpringMVC/spring_mvc_thymleaf_starter/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringMVC/spring_mvc_thymleaf_starter/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SpringMVC/spring_mvc_thymleaf_starter/build/resources/main/templates/greeting.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringMVC/spring_mvc_thymleaf_starter/build/resources/main/templates/greeting.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/universal_object_template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bensiegler/CircuitBreaker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bensiegler/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bensiegler/TrippedBreakerException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/bulkhead.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/general.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bensiegler/Bulkhead.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bensiegler/Bulkhead.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bensiegler/BulkheadManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bensiegler/BulkheadManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bensiegler/circuitbreaker/CircuitBreaker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bensiegler/Bulkhead.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bensiegler/BulkheadManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bensiegler/circuitbreaker/CircuitBreaker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +36,18 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="downloadAnnotationsAutomatically" value="true" />
+        <option name="downloadDocsAutomatically" value="true" />
+        <option name="downloadSourcesAutomatically" value="true" />
+        <option name="updateFoldersOnImportPhase" value="generate-resources" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1bOdd1vdcu0OdDGnLavZNhrXO4w" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -58,12 +58,24 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/target" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/bensiegler" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Test">
     <configuration name="BulkheadManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.bensiegler.BulkheadManager" />
       <module name="RequestBulkhead" />
@@ -77,8 +89,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bensiegler.Test" />
+      <module name="RequestBulkhead" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bensiegler.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test" />
         <item itemvalue="Application.BulkheadManager" />
       </list>
     </recent_temporary>
@@ -96,50 +122,71 @@
     </task>
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../.." />
+    </ignored-roots>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="208" y="43" key="#Project_Structure" timestamp="1588508977699">
+    <state x="208" y="43" key="#Project_Structure" timestamp="1588542856816">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="208" y="43" key="#Project_Structure/0.23.1440.877@0.23.1440.877" timestamp="1588508977699" />
-    <state x="533" y="184" key="#com.intellij.ide.util.MemberChooser" timestamp="1588511799958">
+    <state x="208" y="43" key="#Project_Structure/0.23.1440.877@0.23.1440.877" timestamp="1588542856816" />
+    <state x="533" y="184" key="#com.intellij.ide.util.MemberChooser" timestamp="1588517453295">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="533" y="184" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1588511799958" />
-    <state width="1398" height="231" key="GridCell.Tab.0.bottom" timestamp="1588513709261">
+    <state x="533" y="184" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1588517453295" />
+    <state x="457" y="259" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1588532041521">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="231" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1588513709261" />
-    <state width="1398" height="231" key="GridCell.Tab.0.center" timestamp="1588513709260">
+    <state x="457" y="259" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1440.877@0.23.1440.877" timestamp="1588532041521" />
+    <state width="1398" height="286" key="GridCell.Tab.0.bottom" timestamp="1588547343640">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="231" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1588513709260" />
-    <state width="1398" height="231" key="GridCell.Tab.0.left" timestamp="1588513709260">
+    <state width="1398" height="286" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1588547343640" />
+    <state width="1398" height="286" key="GridCell.Tab.0.center" timestamp="1588547343639">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="231" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1588513709260" />
-    <state width="1398" height="231" key="GridCell.Tab.0.right" timestamp="1588513709260">
+    <state width="1398" height="286" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1588547343639" />
+    <state width="1398" height="286" key="GridCell.Tab.0.left" timestamp="1588547343639">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="231" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1588513709260" />
-    <state width="1398" height="286" key="GridCell.Tab.1.bottom" timestamp="1588513533482">
+    <state width="1398" height="286" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1588547343639" />
+    <state width="1398" height="286" key="GridCell.Tab.0.right" timestamp="1588547343640">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="286" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1588513533482" />
-    <state width="1398" height="286" key="GridCell.Tab.1.center" timestamp="1588513533482">
+    <state width="1398" height="286" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1588547343640" />
+    <state width="1398" height="286" key="GridCell.Tab.1.bottom" timestamp="1588547343641">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="286" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1588513533482" />
-    <state width="1398" height="286" key="GridCell.Tab.1.left" timestamp="1588513533481">
+    <state width="1398" height="286" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1588547343641" />
+    <state width="1398" height="286" key="GridCell.Tab.1.center" timestamp="1588547343640">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="286" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1588513533481" />
-    <state width="1398" height="286" key="GridCell.Tab.1.right" timestamp="1588513533482">
+    <state width="1398" height="286" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1588547343640" />
+    <state width="1398" height="286" key="GridCell.Tab.1.left" timestamp="1588547343640">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="286" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1588513533482" />
-    <state x="208" y="43" key="SettingsEditor" timestamp="1588509476227">
+    <state width="1398" height="286" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1588547343640" />
+    <state width="1398" height="286" key="GridCell.Tab.1.right" timestamp="1588547343640">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="208" y="43" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1588509476227" />
+    <state width="1398" height="286" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1588547343640" />
+    <state x="258" y="123" key="Maven.ArtifactSearchDialog" timestamp="1588540458282">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="258" y="123" key="Maven.ArtifactSearchDialog/0.23.1440.877@0.23.1440.877" timestamp="1588540458282" />
+    <state x="335" y="168" key="NewModule_or_Project.wizard" timestamp="1588539743377">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="335" y="168" key="NewModule_or_Project.wizard/0.23.1440.877@0.23.1440.877" timestamp="1588539743377" />
+    <state x="119" y="23" width="1177" height="837" key="SettingsEditor" timestamp="1588547319343">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="119" y="23" width="1177" height="837" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1588547319343" />
+    <state x="88" y="124" key="new project wizard" timestamp="1588518289001">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="88" y="124" key="new project wizard/0.23.1440.877@0.23.1440.877" timestamp="1588518289001" />
   </component>
 </project>
