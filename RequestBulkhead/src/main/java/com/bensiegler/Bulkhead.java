@@ -1,38 +1,39 @@
 package com.bensiegler;
 
-import com.bensiegler.circuitbreaker.CircuitBreaker;
-import org.springframework.context.annotation.Configuration;
-
 import java.util.concurrent.*;
 
 public class Bulkhead {
+    private String name;
+    private String[] location;
+    private CircuitBreaker circuitBreaker;
 
-    //config fields
-    String name;
-    String location;
-    int poolSize;
-
-    CircuitBreaker circuitBreaker;
-
-
-
-    public Bulkhead(String name, String location, int poolSize, CircuitBreaker circuitBreaker) {
+    public Bulkhead(String name, String[] location, CircuitBreaker circuitBreaker) {
         this.name = name;
         this.location = location;
-        this.poolSize = poolSize;
         this.circuitBreaker = circuitBreaker;
-
-        executorService = Executors.newFixedThreadPool(poolSize);
     }
 
+    public Future<?> submitRequest(Callable<?> callable, int id) throws TimeoutException, TrippedBreakerException{
+        return circuitBreaker.submitRequest(callable, id);
+    }
 
+    public String getName() {
+        return name;
+    }
+
+    public String[] getLocation() {
+        return location;
+    }
+
+    public CircuitBreaker getCircuitBreaker() {
+        return circuitBreaker;
+    }
 
     @Override
     public String toString() {
         return "Bulkhead{" +
                 "name='" + name + '\'' +
                 ", location='" + location + '\'' +
-                ", poolSize=" + poolSize +
                 ", circuitBreaker=" + circuitBreaker.toString() +
                 '}';
     }

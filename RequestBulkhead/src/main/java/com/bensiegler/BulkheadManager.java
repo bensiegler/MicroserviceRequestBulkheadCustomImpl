@@ -1,71 +1,56 @@
 package com.bensiegler;
 
-import com.bensiegler.circuitbreaker.CircuitBreaker;
-
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.*;
-import java.util.function.BiConsumer;
 
 public class BulkheadManager {
-    HashMap<String, Bulkhead> bulkheads = new HashMap<>();
+    HashMap<String, Bulkhead> bulkheads;
 
     public BulkheadManager() {
         bulkheads = new HashMap<>();
         addConfigBulkheads();
     }
 
-    public static void main(String[] args) {
-        BulkheadManager manager = new BulkheadManager();
-        manager.addConfigBulkheads();
-        HashMap<String, Bulkhead> bulks = manager.bulkheads;
-
-        System.out.println(bulks.get("hello"));
-        System.out.println(bulks.get("serviceName").toString());
-
-    }
-
     private void addConfigBulkheads() {
-        String propFileName = "config.properties";
-        try(InputStream inputStream = BulkheadManager.class.getClassLoader().getResourceAsStream(propFileName)) {
-            Properties prop = new Properties();
-
-
-            if (inputStream != null) {
-                prop.load(inputStream);
-            } else {
-                throw new FileNotFoundException("property file '" + propFileName + "' not found in the classpath");
-            }
-
+            Properties prop = getProperties("bulkhead.properties");
             Object[] keyArray = prop.keySet().toArray();
-            String currentBulkhead = "nothing";
+            String currentBulkhead;
             String currentProp;
 
             ArrayList<String> constructedBulkheads = new ArrayList<>();
             try {
-                for (int i = 0; i < keyArray.length; i++) {
-                    currentProp = String.valueOf(keyArray[i]);
-                    if(currentProp.substring(0, currentProp.indexOf(".")).equals("bulkhead")) {
+                for (Object o : keyArray) {
+                    currentProp = String.valueOf(o);
+                    if (currentProp.substring(0, currentProp.indexOf(".")).equals("bulkhead")) {
 
                         currentProp = currentProp.substring(currentProp.indexOf(".") + 1);
                         currentBulkhead = currentProp.substring(0, currentProp.indexOf("."));
 
-                        if(!constructedBulkheads.contains(currentBulkhead)) {
-                            String location = prop.getProperty("bulkhead." + currentBulkhead + ".location");
+                        if (!constructedBulkheads.contains(currentBulkhead)) {
+                            String[] location = prop.getProperty("bulkhead." + currentBulkhead + ".locations").split(",");
                             int poolSize = Integer.parseInt(
-                                    prop.getProperty("bulkhead." + currentBulkhead + ".poolSize"));
+                                    prop.getProperty("bulkhead." + currentBulkhead +
+                                            ".poolSize"));
                             int timeoutThreshold = Integer.parseInt(
-                                    prop.getProperty("bulkhead." + currentBulkhead + ".circuitBreaker.timeoutThreshHold"));
+                                    prop.getProperty("bulkhead." + currentBulkhead +
+                                            ".circuitBreaker.timeoutThreshHold"));
                             int serviceSuspensionSusceptibility = Integer.parseInt(
-                                    prop.getProperty("bulkhead." + currentBulkhead + ".circuitBreaker.serviceSuspensionSusceptibility"));
+                                    prop.getProperty("bulkhead." + currentBulkhead +
+                                            ".circuitBreaker.serviceSuspensionSusceptibility"));
                             int healthCheckIntervalAfterSuspension = Integer.parseInt(
-                                    prop.getProperty("bulkhead." + currentBulkhead + ".circuitBreaker.healthCheckIntervalAfterSuspension"));
+                                    prop.getProperty("bulkhead." + currentBulkhead +
+                                            ".circuitBreaker.healthCheckIntervalAfterSuspension"));
+                            int healthCheckIntervalWhileActive = Integer.parseInt(
+                                    prop.getProperty("bulkhead." + currentBulkhead +
+                                            ".circuitBreaker.healthCheckIntervalWhileActive"));
 
-                            CircuitBreaker circuitBreaker = new CircuitBreaker(timeoutThreshold,
-                                                                                serviceSuspensionSusceptibility,
-                                                                                healthCheckIntervalAfterSuspension);
+                            CircuitBreaker circuitBreaker = new CircuitBreaker(poolSize, timeoutThreshold,
+                                    serviceSuspensionSusceptibility,
+                                    healthCheckIntervalAfterSuspension,
+                                    healthCheckIntervalWhileActive);
 
-                            addNewBulkhead(currentBulkhead, location, poolSize, circuitBreaker);
+                            addNewBulkhead(currentBulkhead, location, circuitBreaker);
                             constructedBulkheads.add(currentBulkhead);
                         }
                     }
@@ -74,18 +59,47 @@ public class BulkheadManager {
                 System.err.println("Malformed Bulkhead Config File");
                 e.printStackTrace();
             }
-
-        }catch (Exception e) {
-            System.out.println("Exception: " + e);
-        }
     }
 
-    private void addNewBulkhead(String name, String location, int poolSize, CircuitBreaker circuitBreaker) {
-        bulkheads.put(name, new Bulkhead(name, location, poolSize, circuitBreaker));
+    private void addNewBulkhead(String name, String[] location, CircuitBreaker circuitBreaker) {
+        bulkheads.put(name, new Bulkhead(name, location, circuitBreaker));
     }
 
     public void refreshBulkheadConfig() {
         bulkheads.clear();
         addConfigBulkheads();
     }
+
+    public void shutdownAll() {
+        Object[] keys = bulkheads.keySet().toArray();
+
+        for(Object o: keys) {
+            bulkheads.get(String.valueOf(o)).getCircuitBreaker().executorService.shutdown();
+        }
+    }
+
+    public void shutdownAllNow() {
+        Object[] keys = bulkheads.keySet().toArray();
+
+        for(Object o: keys) {
+            bulkheads.get(String.valueOf(o)).getCircuitBreaker().executorService.shutdownNow();
+        }
+    }
+
+    public static Properties getProperties(String propFileName) {
+        Properties prop = new Properties();
+        try(InputStream inputStream = BulkheadManager.class.getClassLoader().getResourceAsStream(propFileName)) {
+            if (inputStream != null) {
+                prop.load(inputStream);
+            } else {
+                throw new FileNotFoundException("property file '" + propFileName + "' not found in the classpath");
+            }
+        }catch (Exception e) {
+            //Todo change to logger instead of printing
+            System.out.println("Exception: " + e);
+        }
+        return prop;
+
+    }
+
 }
