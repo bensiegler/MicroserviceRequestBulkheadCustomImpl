@@ -17,7 +17,7 @@ public class Test {
         };
 
         Callable<Integer> callable2 = () -> {
-            Thread.sleep(200);
+            Thread.sleep(20);
             System.out.println("callable 2 completed");
             return 7;
         };
@@ -44,6 +44,7 @@ public class Test {
             t.start();
             t.join();;
         }
+
         System.out.println("callable 1 took " + (System.currentTimeMillis() - startcall1));
         Thread.sleep(2000);
         long startcall2 = System.currentTimeMillis();
@@ -52,9 +53,9 @@ public class Test {
             t.start();
             t.join();;
         }
+
         System.out.println("callable 2 took " + (System.currentTimeMillis() - startcall2));
+
         manager.shutdownAll();
-
-
     }
 }

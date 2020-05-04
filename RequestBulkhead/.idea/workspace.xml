@@ -2,25 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e43b0bd-9687-494f-bc6c-c0be7fcd2f02" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/universal_object_template.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bensiegler/CircuitBreaker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bensiegler/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bensiegler/TrippedBreakerException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/bulkhead.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/general.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bensiegler/Bulkhead.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bensiegler/Bulkhead.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bensiegler/BulkheadManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bensiegler/BulkheadManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bensiegler/circuitbreaker/CircuitBreaker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bensiegler/Bulkhead.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bensiegler/BulkheadManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bensiegler/circuitbreaker/CircuitBreaker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bensiegler/CircuitBreaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bensiegler/CircuitBreaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bensiegler/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bensiegler/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/bulkhead.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/bulkhead.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/general.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/microservice.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,19 +47,20 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources" />
-      <recent name="$PROJECT_DIR$/target" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/com/bensiegler" />
       <recent name="$PROJECT_DIR$/src/main/java" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$USER_HOME$/Desktop" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/target" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Test">
@@ -128,10 +116,10 @@
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
-    <state x="208" y="43" key="#Project_Structure" timestamp="1588542856816">
+    <state x="208" y="43" key="#Project_Structure" timestamp="1588622349367">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="208" y="43" key="#Project_Structure/0.23.1440.877@0.23.1440.877" timestamp="1588542856816" />
+    <state x="208" y="43" key="#Project_Structure/0.23.1440.877@0.23.1440.877" timestamp="1588622349367" />
     <state x="533" y="184" key="#com.intellij.ide.util.MemberChooser" timestamp="1588517453295">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -140,22 +128,22 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="457" y="259" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1440.877@0.23.1440.877" timestamp="1588532041521" />
-    <state width="1398" height="286" key="GridCell.Tab.0.bottom" timestamp="1588547343640">
+    <state width="1398" height="231" key="GridCell.Tab.0.bottom" timestamp="1588623877698">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="286" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1588547343640" />
-    <state width="1398" height="286" key="GridCell.Tab.0.center" timestamp="1588547343639">
+    <state width="1398" height="231" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1588623877698" />
+    <state width="1398" height="231" key="GridCell.Tab.0.center" timestamp="1588623877697">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="286" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1588547343639" />
-    <state width="1398" height="286" key="GridCell.Tab.0.left" timestamp="1588547343639">
+    <state width="1398" height="231" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1588623877697" />
+    <state width="1398" height="231" key="GridCell.Tab.0.left" timestamp="1588623877697">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="286" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1588547343639" />
-    <state width="1398" height="286" key="GridCell.Tab.0.right" timestamp="1588547343640">
+    <state width="1398" height="231" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1588623877697" />
+    <state width="1398" height="231" key="GridCell.Tab.0.right" timestamp="1588623877698">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="286" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1588547343640" />
+    <state width="1398" height="231" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1588623877698" />
     <state width="1398" height="286" key="GridCell.Tab.1.bottom" timestamp="1588547343641">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

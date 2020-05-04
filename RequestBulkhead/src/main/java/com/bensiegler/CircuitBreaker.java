@@ -1,14 +1,10 @@
 package com.bensiegler;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 import java.util.HashMap;
 import java.util.Properties;
 import java.util.concurrent.*;
 
 public class CircuitBreaker {
-
-
     boolean serviceSuspended = false;
 
     int timeoutThreshHold;
@@ -20,10 +16,10 @@ public class CircuitBreaker {
     HashMap<String, Long> failedRequest = new HashMap<>();
 
     public CircuitBreaker(int poolSize,
-                           int timeoutThreshHold,
-                           int serviceSuspensionSusceptibility,
-                           int healthCheckIntervalAfterSuspension,
-                           int healthCheckIntervalWhileActive) {
+                          int timeoutThreshHold,
+                          int serviceSuspensionSusceptibility,
+                          int healthCheckIntervalAfterSuspension,
+                          int healthCheckIntervalWhileActive) {
         this.timeoutThreshHold = timeoutThreshHold;
         this.serviceSuspensionSusceptibility = serviceSuspensionSusceptibility;
         this.healthCheckIntervalAfterSuspension = healthCheckIntervalAfterSuspension;
@@ -37,7 +33,7 @@ public class CircuitBreaker {
         //TODO pull overall ID off headers.
 
         Long tracerId = 589549583842L;
-        Properties properties  = BulkheadManager.getProperties("general.properties");
+        Properties properties  = BulkheadManager.getProperties("microservice.properties");
 
         String requestID  = properties.getProperty("servicename") + "65456543";
 
@@ -60,9 +56,6 @@ public class CircuitBreaker {
         }
         return future;
     }
-
-
-
 
     @Override
     public String toString() {
