@@ -23,7 +23,11 @@
             <artifactId>universal-object-templates</artifactId>
             <version>1.0</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.bensiegler</groupId>
+            <artifactId>CustomMathMethods</artifactId>
+            <version>1.0</version>
+        </dependency>
 <!--        spring dependencies-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

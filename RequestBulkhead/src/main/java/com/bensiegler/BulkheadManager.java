@@ -65,7 +65,10 @@ public class BulkheadManager {
         bulkheads.put(name, new Bulkhead(name, location, circuitBreaker));
     }
 
+    //stop all current bulkheads from accepting requests but allow them to complete
+    //queued tasks. Then spins up new bulkheads from config file.
     public void refreshBulkheadConfig() {
+        shutdownAll();
         bulkheads.clear();
         addConfigBulkheads();
     }
@@ -74,7 +77,10 @@ public class BulkheadManager {
         Object[] keys = bulkheads.keySet().toArray();
 
         for(Object o: keys) {
-            bulkheads.get(String.valueOf(o)).getCircuitBreaker().executorService.shutdown();
+           CircuitBreaker[] circuitBreakers = bulkheads.get(String.valueOf(o)).getCircuitBreakers();
+           for(CircuitBreaker cb: circuitBreakers) {
+               cb.executorService.shutdown();
+           }
         }
     }
 
@@ -82,7 +88,10 @@ public class BulkheadManager {
         Object[] keys = bulkheads.keySet().toArray();
 
         for(Object o: keys) {
-            bulkheads.get(String.valueOf(o)).getCircuitBreaker().executorService.shutdownNow();
+            CircuitBreaker[] circuitBreakers = bulkheads.get(String.valueOf(o)).getCircuitBreakers();
+            for(CircuitBreaker cb: circuitBreakers) {
+                cb.executorService.shutdownNow();
+            }
         }
     }
 

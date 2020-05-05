@@ -1,5 +1,7 @@
 package com.bensiegler;
 
+import com.bensiegler.exceptions.TrippedBreakerException;
+
 import java.util.HashMap;
 import java.util.Properties;
 import java.util.concurrent.*;
@@ -7,6 +9,7 @@ import java.util.concurrent.*;
 public class CircuitBreaker {
     boolean serviceSuspended = false;
 
+    int poolSize;
     int timeoutThreshHold;
     int serviceSuspensionSusceptibility;
     int healthCheckIntervalAfterSuspension;
@@ -20,6 +23,7 @@ public class CircuitBreaker {
                           int serviceSuspensionSusceptibility,
                           int healthCheckIntervalAfterSuspension,
                           int healthCheckIntervalWhileActive) {
+        this.poolSize = poolSize;
         this.timeoutThreshHold = timeoutThreshHold;
         this.serviceSuspensionSusceptibility = serviceSuspensionSusceptibility;
         this.healthCheckIntervalAfterSuspension = healthCheckIntervalAfterSuspension;
@@ -28,21 +32,27 @@ public class CircuitBreaker {
         executorService = Executors.newFixedThreadPool(poolSize);
     }
 
-    public Future<?> submitRequest(Callable<?> callable, int id) throws TimeoutException, TrippedBreakerException {
-        //TODO pull request ID off headers and store as key in hashmap.
-        //TODO pull overall ID off headers.
+    public static CircuitBreaker createNewBreakerFromExisting(CircuitBreaker circuitBreaker) {
 
-        Long tracerId = 589549583842L;
+        return new CircuitBreaker(circuitBreaker.poolSize,
+                circuitBreaker.timeoutThreshHold,
+                circuitBreaker.serviceSuspensionSusceptibility,
+                circuitBreaker.healthCheckIntervalAfterSuspension,
+                circuitBreaker.healthCheckIntervalWhileActive);
+    }
+
+    public Future<?> submitRequest(Callable<?> callable, Long tracerId) throws TimeoutException, TrippedBreakerException {
+        tracerId = 589549583842L;
+
         Properties properties  = BulkheadManager.getProperties("microservice.properties");
-
-        String requestID  = properties.getProperty("servicename") + "65456543";
-
-        long timeSent = System.currentTimeMillis();
+        String requestID  = properties.getProperty("servicename") + NumberGenerators.randomNumberWithFixedLength(8);
 
         if(serviceSuspended) {
+            failedRequest.put(requestID, System.currentTimeMillis());
             throw new TrippedBreakerException("Request with id " + requestID + " could not be completed as a downstream service is unresponsive",requestID, tracerId);
         }
 
+        long timeSent = System.currentTimeMillis();
         Future<?> future = executorService.submit(callable);
 
         while(!future.isDone()) {
@@ -51,7 +61,7 @@ public class CircuitBreaker {
             if(timeSoFar >= timeoutThreshHold) {
                 //TODO emit event that request has timed out.
                 failedRequest.put(requestID, System.currentTimeMillis());
-                throw new TimeoutException("bulkhead has encountered a request (" + id +") that took longer than the allotted time.");
+                throw new TimeoutException("bulkhead has encountered a request with tracer id " + tracerId +" and outbound request id " + requestID +" that took longer than the allotted time.");
             }
         }
         return future;
